@@ -22,7 +22,7 @@ go-easy是一个基于原生net库实现的非常轻量级的web框架，通过�
 
 ```
 type Filter interface {
-	// 过滤器名称
+    // 过滤器名称
     Name() string
     // 前置过滤器
     Pre(ctx context.Context) (statusCode int, err error)
@@ -87,8 +87,8 @@ Limiter:
 package main
 
 import (
-	"easy/web/filter"
-	"easy"
+    "easy/web/filter"
+    "easy"
 )
 
 type TestFilter struct {
@@ -113,7 +113,7 @@ func (t *TestFilter) PostErr(ctx context.Context) (int, error) {
 
 func main() {
     easy.RegisterFilter(&TestFilter{})
- 	...
+    ...
 }
 ```
 
@@ -123,7 +123,7 @@ func main() {
 package main
 
 import (
-	"easy"
+    "easy"
 )
 
 type TestController struct {
